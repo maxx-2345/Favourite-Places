@@ -1,0 +1,33 @@
+com.example.favourite_places.app-jetified-window-1.2.0-0 C:\Users\maajs\.gradle\caches\transforms-4\08b95fbb4c065cd245302a313d25245b\transformed\jetified-window-1.2.0\res
+com.example.favourite_places.app-jetified-play-services-basement-18.4.0-1 C:\Users\maajs\.gradle\caches\transforms-4\1864783fb9e15599c2929a44cb00a511\transformed\jetified-play-services-basement-18.4.0\res
+com.example.favourite_places.app-jetified-tracing-1.2.0-2 C:\Users\maajs\.gradle\caches\transforms-4\26ef011020a3e38264cbecdb5ed1a255\transformed\jetified-tracing-1.2.0\res
+com.example.favourite_places.app-lifecycle-runtime-2.7.0-3 C:\Users\maajs\.gradle\caches\transforms-4\2b44e8eb54baeca855676432c5d79510\transformed\lifecycle-runtime-2.7.0\res
+com.example.favourite_places.app-lifecycle-viewmodel-2.7.0-4 C:\Users\maajs\.gradle\caches\transforms-4\4522583f8ca47713d84a0f9b4ca755d2\transformed\lifecycle-viewmodel-2.7.0\res
+com.example.favourite_places.app-jetified-play-services-base-18.5.0-5 C:\Users\maajs\.gradle\caches\transforms-4\56bf851b6b98869f51e8c091f4e95062\transformed\jetified-play-services-base-18.5.0\res
+com.example.favourite_places.app-lifecycle-livedata-core-2.7.0-6 C:\Users\maajs\.gradle\caches\transforms-4\57d32948ca2d01a1eaf9228e10360975\transformed\lifecycle-livedata-core-2.7.0\res
+com.example.favourite_places.app-fragment-1.7.1-7 C:\Users\maajs\.gradle\caches\transforms-4\5f549490576630be097ec83a27c768f6\transformed\fragment-1.7.1\res
+com.example.favourite_places.app-jetified-core-ktx-1.13.1-8 C:\Users\maajs\.gradle\caches\transforms-4\63e09f7cd72dfcfc38980d1df3017c86\transformed\jetified-core-ktx-1.13.1\res
+com.example.favourite_places.app-jetified-annotation-experimental-1.4.0-9 C:\Users\maajs\.gradle\caches\transforms-4\77eb79d922c8cf72c3aba3f0bc864f5d\transformed\jetified-annotation-experimental-1.4.0\res
+com.example.favourite_places.app-jetified-core-1.0.0-10 C:\Users\maajs\.gradle\caches\transforms-4\786cf7abd99dcbe9834b555b31d95224\transformed\jetified-core-1.0.0\res
+com.example.favourite_places.app-jetified-lifecycle-process-2.7.0-11 C:\Users\maajs\.gradle\caches\transforms-4\866ba577980946427b692906dc000bc0\transformed\jetified-lifecycle-process-2.7.0\res
+com.example.favourite_places.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-12 C:\Users\maajs\.gradle\caches\transforms-4\8914287abcff24b4d68a198ed02c2e46\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.example.favourite_places.app-core-1.13.1-13 C:\Users\maajs\.gradle\caches\transforms-4\a885c18748d7bc81dc484452b1053a3c\transformed\core-1.13.1\res
+com.example.favourite_places.app-jetified-startup-runtime-1.1.1-14 C:\Users\maajs\.gradle\caches\transforms-4\b8e57de21776dcaab36169424f402e39\transformed\jetified-startup-runtime-1.1.1\res
+com.example.favourite_places.app-jetified-activity-1.9.3-15 C:\Users\maajs\.gradle\caches\transforms-4\bed4b4f3a4aa168215d6b4275453a873\transformed\jetified-activity-1.9.3\res
+com.example.favourite_places.app-jetified-lifecycle-livedata-core-ktx-2.7.0-16 C:\Users\maajs\.gradle\caches\transforms-4\d63d4025746ae30f825c8d9ea852071e\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.example.favourite_places.app-lifecycle-livedata-2.7.0-17 C:\Users\maajs\.gradle\caches\transforms-4\e4568735d96b3f6c8226a39633f57577\transformed\lifecycle-livedata-2.7.0\res
+com.example.favourite_places.app-jetified-savedstate-1.2.1-18 C:\Users\maajs\.gradle\caches\transforms-4\e625822946cd11aeb9eba25f2d459d6c\transformed\jetified-savedstate-1.2.1\res
+com.example.favourite_places.app-jetified-window-java-1.2.0-19 C:\Users\maajs\.gradle\caches\transforms-4\e98be929c36c780f54fda43bfa8fa9bd\transformed\jetified-window-java-1.2.0\res
+com.example.favourite_places.app-jetified-profileinstaller-1.3.1-20 C:\Users\maajs\.gradle\caches\transforms-4\f09c2bf3769497a019af3ae33e7cdce7\transformed\jetified-profileinstaller-1.3.1\res
+com.example.favourite_places.app-core-runtime-2.2.0-21 C:\Users\maajs\.gradle\caches\transforms-4\f0eff8c65b8b5b6a85e3b2e9d3699caf\transformed\core-runtime-2.2.0\res
+com.example.favourite_places.app-debug-22 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\android\app\src\debug\res
+com.example.favourite_places.app-main-23 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\android\app\src\main\res
+com.example.favourite_places.app-pngs-24 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\app\generated\res\pngs\debug
+com.example.favourite_places.app-resValues-25 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\app\generated\res\resValues\debug
+com.example.favourite_places.app-packageDebugResources-26 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\app\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.favourite_places.app-packageDebugResources-27 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.favourite_places.app-debug-28 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\app\intermediates\merged_res\debug\mergeDebugResources
+com.example.favourite_places.app-debug-29 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug\packageDebugResources
+com.example.favourite_places.app-debug-30 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\image_picker_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.favourite_places.app-debug-31 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\location\intermediates\packaged_res\debug\packageDebugResources
+com.example.favourite_places.app-debug-32 C:\Users\maajs\OneDrive\Desktop\Flutter Udemy Course\favourite_places\build\path_provider_android\intermediates\packaged_res\debug\packageDebugResources
