@@ -5,59 +5,33 @@ import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:http/http.dart' as http;
 
+import '../models/place.dart';
+
 class LocationInput extends StatefulWidget {
-  const LocationInput({super.key});
+  const LocationInput({super.key,required this.onSelectedLocation});
+
+  final void Function(PlaceLocation location) onSelectedLocation;
 
   @override
   State<LocationInput> createState() => _LocationInputState();
 }
 
 class _LocationInputState extends State<LocationInput> {
-  Location? _pickedLocation;
+  PlaceLocation? _pickedLocation;
   var _isGettingLocation = false;
+  late double lat;
+  late double lng;
+  var address;
 
-  // void _getCurrentLocation() async {
-  //   Location location = Location();
-  //
-  //   bool serviceEnabled;
-  //   PermissionStatus permissionGranted;
-  //   LocationData locationData;
-  //
-  //   serviceEnabled = await location.serviceEnabled();
-  //   if (!serviceEnabled) {
-  //     serviceEnabled = await location.requestService();
-  //     if (!serviceEnabled) {
-  //       return;
-  //     }
-  //   }
-  //
-  //   permissionGranted = await location.hasPermission();
-  //   if (permissionGranted == PermissionStatus.denied) {
-  //     permissionGranted = await location.requestPermission();
-  //     if (permissionGranted != PermissionStatus.granted) {
-  //       return;
-  //     }
-  //   }
-  //
-  //   setState(() {
-  //     _isGettingLocation = true;
-  //   });
-  //
-  //   locationData = await location.getLocation();
-  //
-  //   final url = Uri.parse(
-  //     'https://api.olamaps.io/places/v1/reverse-geocode?latlng=${locationData.latitude},${locationData.longitude}&api_key=$olaApiKey',
-  //   );
-  //   final headers = {'X-Request-Id': 'XXX'};
-  //   final response = await http.get(url, headers: headers);
-  //   final resData = json.decode(response.body);
-  //   final address = resData['predictions'][0]['description'];
-  //   print('Address= $address');
-  //
-  //   setState(() {
-  //     _isGettingLocation = false;
-  //   });
-  // }
+  String get locationImage {
+    if(_pickedLocation == null){
+      return '';
+    }
+    final lat =_pickedLocation!.latitude;
+    final lng = _pickedLocation!.longitude;
+    return 'https://api.olamaps.io/tiles/v1/styles/default-light-standard/static/auto/600x300.png?marker=$lng,$lat|green|scale:0.5|offset:2,-4&api_key=$olaApiKey';
+  }
+
   void _getCurrentLocation() async {
     final location = Location();
 
@@ -78,10 +52,15 @@ class _LocationInputState extends State<LocationInput> {
     try {
       // Step 2. Get current location
       final locationData = await location.getLocation();
+      lat = locationData.latitude!;
+      lng = locationData.longitude!;
 
+      // if(lat == null || lng == null){
+      //   return;
+      // }
       // Step 3. Form request URL
       final url = Uri.parse(
-        'https://api.olamaps.io/places/v1/reverse-geocode?latlng=${locationData.latitude},${locationData.longitude}&api_key=$olaApiKey',
+        'https://api.olamaps.io/places/v1/reverse-geocode?latlng=$lat,$lng&api_key=$olaApiKey',
       );
 
       // Step 4. Send request and parse response
@@ -90,29 +69,25 @@ class _LocationInputState extends State<LocationInput> {
 
       if (response.statusCode == 200) {
         final resData = json.decode(response.body);
-        String? address;
-        print('response Data: $resData');
-        // Step 5. Extract description from response
-        if (resData['results'] != null &&
-            resData['results'] is List &&
-            resData['results'].isNotEmpty &&
-            resData['results'][0]['formatted_address'] != null) {
-          address = resData['results'][0]['formatted_address'];
-          print('Address: $address');
-        } else {
-          print('No formatted_address found.');
-        }
-
+         address = resData['results'][0]['formatted_address'];
+        print('Adress: $address');
       } else {
         print('Failed to fetch location: ${response.statusCode}');
       }
     } catch (e) {
       print('Error during location fetch: $e');
-    } finally {
-      setState(() {
-        _isGettingLocation = false;
-      });
     }
+
+    setState(() {
+      _pickedLocation = PlaceLocation(
+        latitude: lat,
+        longitude: lng,
+        address: address,
+      );
+      _isGettingLocation = false;
+    });
+
+    widget.onSelectedLocation(_pickedLocation!);
   }
 
   @override
@@ -124,6 +99,10 @@ class _LocationInputState extends State<LocationInput> {
         color: Theme.of(context).colorScheme.onSurface,
       ),
     );
+
+    if(_pickedLocation != null){
+      previewContent = Image.network(locationImage,fit: BoxFit.cover,height: double.infinity,width: double.infinity,);
+    }
 
     if (_isGettingLocation) {
       previewContent = const CircularProgressIndicator();
@@ -164,15 +143,6 @@ class _LocationInputState extends State<LocationInput> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
 
 // final data = json.decode(response.body); // make sure response.statusCode == 200
 //

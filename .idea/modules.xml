@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/favourite_places.iml" filepath="$PROJECT_DIR$/favourite_places.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/favourite_places_android.iml" filepath="$PROJECT_DIR$/android/favourite_places_android.iml" />
     </modules>
   </component>
 </project>
