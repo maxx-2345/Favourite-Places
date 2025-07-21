@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 import '../models/place.dart';
 
 class LocationInput extends StatefulWidget {
-  const LocationInput({super.key,required this.onSelectedLocation});
+  const LocationInput({super.key, required this.onSelectedLocation});
 
   final void Function(PlaceLocation location) onSelectedLocation;
 
@@ -24,10 +24,10 @@ class _LocationInputState extends State<LocationInput> {
   var address;
 
   String get locationImage {
-    if(_pickedLocation == null){
+    if (_pickedLocation == null) {
       return '';
     }
-    final lat =_pickedLocation!.latitude;
+    final lat = _pickedLocation!.latitude;
     final lng = _pickedLocation!.longitude;
     return 'https://api.olamaps.io/tiles/v1/styles/default-light-standard/static/auto/600x300.png?marker=$lng,$lat|green|scale:0.5|offset:2,-4&api_key=$olaApiKey';
   }
@@ -69,7 +69,7 @@ class _LocationInputState extends State<LocationInput> {
 
       if (response.statusCode == 200) {
         final resData = json.decode(response.body);
-         address = resData['results'][0]['formatted_address'];
+        address = resData['results'][0]['formatted_address'];
         print('Adress: $address');
       } else {
         print('Failed to fetch location: ${response.statusCode}');
@@ -100,8 +100,13 @@ class _LocationInputState extends State<LocationInput> {
       ),
     );
 
-    if(_pickedLocation != null){
-      previewContent = Image.network(locationImage,fit: BoxFit.cover,height: double.infinity,width: double.infinity,);
+    if (_pickedLocation != null) {
+      previewContent = Image.network(
+        locationImage,
+        fit: BoxFit.cover,
+        height: double.infinity,
+        width: double.infinity,
+      );
     }
 
     if (_isGettingLocation) {
